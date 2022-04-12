@@ -16,7 +16,7 @@
 
 
 #define MAX_SNIFF_PACKET_NR 100000
-#define MAX_SNIFF_DEVICE_NR 10
+#define MAX_SNIFF_DEVICE_NR 30
 
 //sniffer支持的网络协议类型
 enum protocol_type{
@@ -66,7 +66,7 @@ struct packet_record{
     struct udp_record udp_record;   //UDP类
   } hdr_record;                     //数据包首部信息记录
   struct pcap_pkthdr pcap_hdr;      //pcap packet header
-  char* packet;                     //数据包地址
+  char packet[];                     //数据包地址
 };
 /*
 struct pcap_pkthdr {
@@ -78,7 +78,7 @@ struct pcap_pkthdr {
 #endif
 };
 */
-
+struct timeval
 //Global variables
 extern unsigned long p_cnt;        //记录当前捕捉到的数据包总数
 extern struct packet_record* p_records[MAX_SNIFF_PACKET_NR]; //当前捕捉到的数据包的record数组
@@ -91,7 +91,13 @@ extern char netdevices[MAX_SNIFF_DEVICE_NR][100]; //sniffer可用的网络设备
 void getNetDevices(void);
 
 void sniffer_pcap_handler(u_char *user_arg, const struct pcap_pkthdr *pkthdr, const u_char *packet);
-void ip_handler(char* packet, uint64_t len);
+void ip_handler(const u_char* packet, uint32_t len);
+void arp_handler(const u_char* packet, uint32_t len);
+void tcp_handler(const u_char* packet, uint32_t len);
+void udp_handler(const u_char* packet, uint32_t len);
+void icmp_handler(const u_char* packet, uint32_t len);
+void http_handler(const u_char* packet, uint32_t len);
+void tls_handler(const u_char* packet, uint32_t len);
 
 
 

@@ -14,8 +14,17 @@
 
 @implementation AppDelegate
 
+-(id)init{
+    if(![super init])
+        return nil;
+    Op_queue = [[NSOperationQueue alloc] init];
+    
+    return self;
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    
 }
 
 

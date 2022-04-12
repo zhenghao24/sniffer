@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7123810B2805688800148DCF /* SniffOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7123810A2805688800148DCF /* SniffOperation.m */; };
+		7123810E2805AE2E00148DCF /* DisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7123810D2805AE2E00148DCF /* DisplayViewController.m */; };
 		715530B927EF012D00BA9E60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 715530B827EF012D00BA9E60 /* AppDelegate.m */; };
 		715530BC27EF012D00BA9E60 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 715530BB27EF012D00BA9E60 /* ViewController.m */; };
 		715530BE27EF012F00BA9E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 715530BD27EF012F00BA9E60 /* Assets.xcassets */; };
@@ -15,7 +17,6 @@
 		715530CE27EF013000BA9E60 /* SnifferHTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 715530CD27EF013000BA9E60 /* SnifferHTests.m */; };
 		715530D827EF013000BA9E60 /* SnifferHUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 715530D727EF013000BA9E60 /* SnifferHUITests.m */; };
 		715530DA27EF013000BA9E60 /* SnifferHUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 715530D927EF013000BA9E60 /* SnifferHUITestsLaunchTests.m */; };
-		71B82CAD27FECE6B008FCD5F /* NetDeviceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B82CAC27FECE6B008FCD5F /* NetDeviceTableViewCell.m */; };
 		71C4A854280454B200DA7681 /* sniffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C4A853280454B200DA7681 /* sniffer.m */; };
 		71C594A928018069000365BA /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C594A828018069000365BA /* StartViewController.m */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		712381092805688800148DCF /* SniffOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SniffOperation.h; sourceTree = "<group>"; };
+		7123810A2805688800148DCF /* SniffOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SniffOperation.m; sourceTree = "<group>"; };
+		7123810C2805AE2E00148DCF /* DisplayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayViewController.h; sourceTree = "<group>"; };
+		7123810D2805AE2E00148DCF /* DisplayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisplayViewController.m; sourceTree = "<group>"; };
 		715530B427EF012D00BA9E60 /* SnifferH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnifferH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		715530B727EF012D00BA9E60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		715530B827EF012D00BA9E60 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -52,8 +57,6 @@
 		715530D327EF013000BA9E60 /* SnifferHUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnifferHUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		715530D727EF013000BA9E60 /* SnifferHUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnifferHUITests.m; sourceTree = "<group>"; };
 		715530D927EF013000BA9E60 /* SnifferHUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnifferHUITestsLaunchTests.m; sourceTree = "<group>"; };
-		71B82CAB27FECE6B008FCD5F /* NetDeviceTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetDeviceTableViewCell.h; sourceTree = "<group>"; };
-		71B82CAC27FECE6B008FCD5F /* NetDeviceTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetDeviceTableViewCell.m; sourceTree = "<group>"; };
 		71C4A853280454B200DA7681 /* sniffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sniffer.m; sourceTree = "<group>"; };
 		71C4A855280454FE00DA7681 /* sniffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sniffer.h; sourceTree = "<group>"; };
 		71C594A728018069000365BA /* StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
@@ -116,12 +119,14 @@
 				715530BF27EF012F00BA9E60 /* Main.storyboard */,
 				715530C227EF012F00BA9E60 /* main.m */,
 				715530C427EF012F00BA9E60 /* SnifferH.entitlements */,
-				71B82CAB27FECE6B008FCD5F /* NetDeviceTableViewCell.h */,
-				71B82CAC27FECE6B008FCD5F /* NetDeviceTableViewCell.m */,
 				71C594A728018069000365BA /* StartViewController.h */,
 				71C594A828018069000365BA /* StartViewController.m */,
 				71C4A853280454B200DA7681 /* sniffer.m */,
 				71C4A855280454FE00DA7681 /* sniffer.h */,
+				712381092805688800148DCF /* SniffOperation.h */,
+				7123810A2805688800148DCF /* SniffOperation.m */,
+				7123810C2805AE2E00148DCF /* DisplayViewController.h */,
+				7123810D2805AE2E00148DCF /* DisplayViewController.m */,
 			);
 			path = SnifferH;
 			sourceTree = "<group>";
@@ -272,12 +277,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7123810B2805688800148DCF /* SniffOperation.m in Sources */,
 				715530BC27EF012D00BA9E60 /* ViewController.m in Sources */,
 				71C4A854280454B200DA7681 /* sniffer.m in Sources */,
-				71B82CAD27FECE6B008FCD5F /* NetDeviceTableViewCell.m in Sources */,
 				71C594A928018069000365BA /* StartViewController.m in Sources */,
 				715530C327EF012F00BA9E60 /* main.m in Sources */,
 				715530B927EF012D00BA9E60 /* AppDelegate.m in Sources */,
+				7123810E2805AE2E00148DCF /* DisplayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
