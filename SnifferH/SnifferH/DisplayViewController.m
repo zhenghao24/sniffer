@@ -301,12 +301,14 @@ static struct packet_record* sel_record;
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
-    char content[MAX_PACKET_LEN];
-    struct packet_record* record = f_records[self.PacketTableView.selectedRow];
-    TransContent(record->packet, content, record->pcap_hdr.caplen);
-    self.RawPacketContent.string = [NSString stringWithUTF8String:content];
-    sel_record = record;
-    layer_nr = sel_record->layer_nr;
-    [self.ProtocolLayer reloadData];
+    if(notification.object == self.PacketTableView && self.PacketTableView.selectedRow){
+        char content[MAX_PACKET_LEN];
+        struct packet_record* record = f_records[self.PacketTableView.selectedRow];
+        TransContent(record->packet, content, record->pcap_hdr.caplen);
+        self.RawPacketContent.string = [NSString stringWithUTF8String:content];
+        sel_record = record;
+        layer_nr = sel_record->layer_nr;
+        [self.ProtocolLayer reloadData];
+    }
 }
 @end
