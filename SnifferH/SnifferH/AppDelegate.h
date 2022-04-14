@@ -10,8 +10,8 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate>{
     NSOperationQueue* Op_queue;
 }
-
-
+@property NSOperationQueue* Op_queue;
++(id)shared;
 
 
 @end

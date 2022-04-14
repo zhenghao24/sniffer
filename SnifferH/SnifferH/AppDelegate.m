@@ -13,12 +13,24 @@
 @end
 
 @implementation AppDelegate
+@synthesize Op_queue;
+static AppDelegate *shared;
+
++(id)shared{
+    if (!shared) {
+        shared = [[AppDelegate alloc] init];
+    }
+    return shared;
+}
 
 -(id)init{
+    if (shared) {
+        return shared;
+    }
     if(![super init])
         return nil;
-    Op_queue = [[NSOperationQueue alloc] init];
-    
+    //Op_queue = [[NSOperationQueue alloc] init];
+    shared = self;
     return self;
 }
 

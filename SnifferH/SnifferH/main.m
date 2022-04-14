@@ -13,8 +13,6 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // Setup code that might create autoreleased objects goes here.
     }
-    getNetDevices();
-    
-    
+    //init_filter();
     return NSApplicationMain(argc, argv);
 }
